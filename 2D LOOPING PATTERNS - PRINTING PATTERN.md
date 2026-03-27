@@ -1,33 +1,41 @@
-# Exp.No:2d
-## LOOPING PATTERNS - PRINTING PATTERN
+# Exp.No:3d  
+## TUPLES - A TUPLE WITH MULTIPLES OF 5
+
+---
 
 ### AIM  
-To write a Python program to print a triangular star pattern using loops.
+To write a Python program to create a tuple containing all multiples of 5 up to a given number **N**.
 
+---
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Read the integer `n` from the user using `input()`. This will determine the number of rows in the pattern.  
-3. Initialize a variable `i = 0`. This will help adjust the spacing before the stars.  
-4. Loop through rows from `0` to `n - 1`:  
-   - For each row, calculate the number of spaces to print using the formula: `((n - rows - 1) * 2) + i`.  
-   - Print the calculated number of spaces using `print(" ", end="")`.  
-   - Increment `i` by 1 after each row.  
-   - Print stars using a nested loop: the number of stars in each row is `rows + 1`, printed using `print("*", end="  ")`.  
-   - Print a newline after each row using `print("")` to move to the next line.  
-5. Terminate the program.
+2. Accept an integer `N` from the user.  
+3. Use a generator expression inside the `tuple()` function to create a tuple `multiples_of_5` with values starting from `5` up to `N - 1`, stepping by `5`.  
+4. Return the tuple `multiples_of_5`.  
+5. Print the resulting tuple.  
+6. Terminate the program.
+
+---
 
 ### PROGRAM
 
-for i in range(rows,0,-1):
-    for j in range(0,i):
-        print("*",end=" ")
-    print()
-    
-### OUTPUT
+```
+n = eval(input())
+a = []
+for i in range(1, n):
+    if i % 9 == 0:
+        a.append(i)
+b = tuple(a)
+print(b)
+print("Length of the tuple is", len(a))
 
-![image](https://github.com/user-attachments/assets/d511a865-bfcf-426e-ba2b-28be32fe05c7)
+```
+
+### OUTPUT
+![image](https://github.com/user-attachments/assets/419d0b97-f0c3-4868-a1d5-3fdff90f89e6)
+
 
 ### RESULT
-Thus the Python program to print a downward pyramid star pattern using loops was executed successfully and the output was verified.
+Thus the program to create a tuple of multiples of 9 up to N and print the tuple and its length has been implemented and executed successfully.
