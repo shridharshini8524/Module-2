@@ -1,36 +1,44 @@
-# Exp. No: 2a  
+# Exp.No:3c
+## LIST - EVEN NUMBERS LIST
 
-## ITERATIVE STATEMENTS –  PRINTING N NATURAL NUMBERS
+---
 
-###  Aim
-To create a Python program for printing n natural numbers using a for loop.
-###  Algorithm
+### AIM  
+To write a Python function that accepts a number **N** and creates a list containing all even numbers up to **N**.
 
-1.Begin the program.
-2.Use input() to read the value of n (the upper limit) from the user.
-3.Convert the input to an integer.
-4.Display the message "Natural Numbers are :".
-5.Use a for loop to iterate from 1 to n (inclusive).
-6.In each iteration, print the current value of i.
-7.Terminate the program.
-###  Program
+---
 
-```python
-a=int(input())
-print("Natural Numbers are :")
-for i in range(1,a+1):
-    print(i)
+### ALGORITHM
+
+1. Begin the program.  
+2. Accept an integer `a` from the user.  
+3. Create an empty list `l`.  
+4. Use a `for` loop to iterate through numbers from `1` to `a - 1`:  
+   - For each number `i`, check if it is even using `i % 2 == 0`.  
+   - If it is even, append `i` to the list `l`.  
+5. Print the final list `l` containing all the even numbers.  
+6. Terminate the program.
+
+---
+
+### PROGRAM
 
 ```
 
 
-### OUTPUT
+def createlist(n):
+    l = []
+    for i in range(12, n):
+        if i % 2 == 0:
+            l.append(i)
+    print("List =", l)
+    print("Sum of the list", sum(l))
 
-![image](https://github.com/user-attachments/assets/c3dfba8e-0055-4a41-a01b-1a1b6a7ae546)
+```
+
+### OUTPUT
+![image](https://github.com/user-attachments/assets/3053e83d-19d7-4dd9-b433-544978b01c66)
 
 
 ### RESULT
-
-Thus,the given python program is implemented and executed sucessfully.
-```
-
+Thus the program that creates a list of even numbers from 12 to n and prints the list and its sum has been implemented and executed successfully.
